@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    
+    
+</head>
+<body>
+    <div class="div1">
+            <div class="card">
+                <div class="search">
+                    <input type="text" placeholder="enter city name" spellcheck="false">
+                </div>
+                <div class="error">
+                    <p>Invalid city name</p>
+                </div>
+                <div class="weather">
+                    <h3 class="code"></h3>
+                    <img src="images/rain.png" class="weather-icon">
+                    <h3 class="description"></h3>
+        
+                    <h1 class="temp">22°C</h1>
+                    <h3 class="feels_like">Feels like 25°C</h3>
+                    <h2 class="city">Moscow</h2>
+                    <div class="details">
+                        <div class="col">
+                            <img src="images/humidity.png">
+                            <div>
+                                <p class="humidity">50%</p>
+                                <p>Humidity</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <img src="images/wind.png">
+                            <div>
+                                <p class="wind">15 km/h</p>
+                                <p>Wind Speed</p>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <div class="col">
+                            <p class="pressure"></p>
+    
+                        </div>
+                        <div class="col">
+                            <p class="rain"></p>
+                        </div>
+                    </div>
+                    <p class="air-quality">air</p>
+                </div>
+        </div>
+    
+    </div>
+    <div class="div2">
+        <div class="map-container">
+            <div id="map" style="height: 800px;"></div>
+        </div>
+    </div>
+    <div id="sidebar" class="sidebar">
+        <div class="card">
+            <h2>Alerts</h2>
+            <div class="nws-alerts">
+                <ul id="alerts-list"></ul>
+            </div>
+        </div>
+        <div class="card">
+            <div id="topNewsContainer">
+                <h2>Top News Articles</h2>
+                <ul id="topNewsList"></ul>
+            </div>
+        </div>
+    </div>
+  
+    <div class="toggle-btn" onclick="toggleSidebar()">☰</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="core.js"></script>
+
+</body>
+</html>
